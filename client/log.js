@@ -6,7 +6,7 @@ let chatLoaded = false;
 let chatView = undefined;
 
 alt.onServer('log', (message)=>{
-    alt.log('[SERVER]' + message)
+    alt.log('[SERVER] ' + message)
     chatView.emit('chat:Message', '{FF4040}[SERVER] {FFFFFF}' + message);
 });
 chatView = new alt.WebView('http://resource/client/html/index.html');
