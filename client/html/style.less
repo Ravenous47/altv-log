@@ -1,0 +1,48 @@
+@font-inter: 'Inter', sans-serif;
+
+body {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#app {
+    font-family: @font-inter;
+    padding: 20px;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    .chat {
+        width: 520px;
+        height: 270px;
+        display: grid;
+        grid-template-rows: 1fr 32px;
+
+        .messages {
+            display: flex;
+            flex-direction: column-reverse;
+            width: 100%;
+            margin-bottom: 4px;
+            overflow-y: hidden;
+
+            .message {
+                color: #ebebeb;
+                text-shadow: 0 0 2px black;
+                width: 100%;
+                text-align: left;
+                margin-top: 2px;
+                margin-bottom: 2px;
+                font-weight: 600;
+                line-height: 1.2em;
+                direction: ltr;
+                user-select: none;
+                opacity: 1;
+                font-size: 15px;
+            }
+        }
+    }
+}
